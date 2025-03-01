@@ -1,0 +1,9 @@
+{
+    "name": "regression-num-medium-0-houses",
+    "id": "regression-num-medium-0-houses",
+    "task_type": "regression",
+    "train_size": 10000,
+    "val_size": 3192,
+    "test_size": 7448,
+    "n_num_features": 8
+}

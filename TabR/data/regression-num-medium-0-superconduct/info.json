@@ -1,0 +1,9 @@
+{
+    "name": "regression-num-medium-0-superconduct",
+    "id": "regression-num-medium-0-superconduct",
+    "task_type": "regression",
+    "train_size": 10000,
+    "val_size": 3378,
+    "test_size": 7885,
+    "n_num_features": 79
+}

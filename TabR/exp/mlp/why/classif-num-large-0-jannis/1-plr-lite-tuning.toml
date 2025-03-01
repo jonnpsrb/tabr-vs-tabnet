@@ -1,0 +1,39 @@
+seed = 0
+function = "bin.ffn.main"
+n_trials = 100
+timeout = "__null__"
+
+[sampler]
+
+[space]
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+
+[space.data]
+seed = 0
+cache = true
+path = ":data/classif-num-large-0-jannis"
+num_policy = "quantile"
+cat_policy = "__null__"
+y_policy = "__null__"
+
+[space.optimizer]
+type = "AdamW"
+lr = 3.550107000212072e-05
+weight_decay = 5.343176451902249e-06
+
+[space.model.backbone]
+type = "MLP"
+n_blocks = 2
+d_layer = 325
+dropout = 0.49230241617792875
+activation = "ReLU"
+
+[space.model.num_embeddings]
+type = "PLREmbeddings"
+n_frequencies = 40
+frequency_scale = 0.010034627644607351
+d_embedding = 38
+lite = true

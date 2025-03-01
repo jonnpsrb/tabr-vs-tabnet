@@ -1,0 +1,141 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "Tesla T4"
+    ],
+    "config": {
+        "seed": 0,
+        "function": "bin.tabr_eq.main",
+        "n_trials": 100,
+        "timeout": null,
+        "sampler": {},
+        "space": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "context_size": 96,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "path": ":data/regression-num-medium-0-pol",
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "y_policy": "standard"
+            },
+            "model": {
+                "num_embeddings": null,
+                "d_main": [
+                    "_tune_",
+                    "int",
+                    16,
+                    384
+                ],
+                "context_dropout": [
+                    "_tune_",
+                    "uniform",
+                    0.0,
+                    0.6
+                ],
+                "d_multiplier": 2.0,
+                "encoder_n_blocks": 0,
+                "predictor_n_blocks": 1,
+                "mixer_normalization": "auto",
+                "dropout0": [
+                    "_tune_",
+                    "uniform",
+                    0.0,
+                    0.6
+                ],
+                "dropout1": 0.0,
+                "normalization": "LayerNorm",
+                "activation": "ReLU"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    3e-05,
+                    0.001
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    1e-06,
+                    0.0001
+                ]
+            }
+        }
+    },
+    "best": {
+        "function": "bin.tabr_eq.main",
+        "gpus": [
+            "Tesla T4"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "context_size": 96,
+            "data": {
+                "seed": 0,
+                "cache": true,
+                "path": ":data/regression-num-medium-0-pol",
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "y_policy": "standard"
+            },
+            "model": {
+                "num_embeddings": null,
+                "d_main": 218,
+                "context_dropout": 0.4291136198234517,
+                "d_multiplier": 2.0,
+                "encoder_n_blocks": 0,
+                "predictor_n_blocks": 1,
+                "mixer_normalization": "auto",
+                "dropout0": 0.3616580256429863,
+                "dropout1": 0.0,
+                "normalization": "LayerNorm",
+                "activation": "ReLU"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.000202727317015276,
+                "weight_decay": 7.501954443620125e-06
+            }
+        },
+        "n_parameters": 627187,
+        "prediction_type": null,
+        "best_epoch": 70,
+        "metrics": {
+            "train": {
+                "rmse": 2.345793172390129,
+                "mae": 1.025560881728424,
+                "r2": 0.9968038975005428,
+                "score": -2.345793172390129
+            },
+            "val": {
+                "rmse": 5.470459635393294,
+                "mae": 1.9433241967506945,
+                "r2": 0.9832044006615167,
+                "score": -5.470459635393294
+            },
+            "test": {
+                "rmse": 5.672307599115317,
+                "mae": 1.939529842352897,
+                "r2": 0.9818932350743208,
+                "score": -5.672307599115317
+            }
+        },
+        "time": "0:01:50.900096",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 0,
+        "tuning_time": "0:01:53.074129"
+    },
+    "time": "0:27:16.221863",
+    "n_completed_trials": 14
+}

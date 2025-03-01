@@ -1,0 +1,39 @@
+seed = 0
+function = "bin.tabr.main"
+n_trials = 100
+timeout = "__null__"
+
+[sampler]
+
+[space]
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+context_size = 96
+
+[space.data]
+seed = 0
+cache = true
+path = ":data/classif-cat-medium-0-electricity"
+num_policy = "quantile"
+cat_policy = "ordinal"
+y_policy = "__null__"
+
+[space.model]
+num_embeddings = "__null__"
+d_main = 250
+context_dropout = 0.22112764598692444
+d_multiplier = 2.0
+encoder_n_blocks = 0
+predictor_n_blocks = 1
+mixer_normalization = "auto"
+dropout0 = 0.5638594774012687
+dropout1 = 0.0
+normalization = "LayerNorm"
+activation = "ReLU"
+
+[space.optimizer]
+type = "AdamW"
+lr = 0.0008932721872223783
+weight_decay = 5.0242817593757715e-05

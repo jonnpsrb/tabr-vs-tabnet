@@ -1,0 +1,39 @@
+seed = 0
+function = "bin.ffn.main"
+n_trials = 100
+timeout = "__null__"
+
+[sampler]
+
+[space]
+seed = 0
+batch_size = 128
+patience = 16
+n_epochs = inf
+
+[space.data]
+seed = 0
+cache = true
+path = ":data/classif-num-medium-0-MagicTelescope"
+num_policy = "quantile"
+cat_policy = "__null__"
+y_policy = "__null__"
+
+[space.optimizer]
+type = "AdamW"
+lr = 0.0007321664916178617
+weight_decay = 1.9402298922897315e-06
+
+[space.model.backbone]
+type = "MLP"
+n_blocks = 6
+d_layer = 919
+dropout = 0.4607789939879645
+activation = "ReLU"
+
+[space.model.num_embeddings]
+type = "PLREmbeddings"
+n_frequencies = 37
+frequency_scale = 0.03900394282175909
+d_embedding = 60
+lite = true

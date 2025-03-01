@@ -1,0 +1,36 @@
+seed = 0
+function = "bin.xgboost_.main"
+n_trials = 200
+timeout = "__null__"
+
+[sampler]
+n_startup_trials = 20
+
+[space]
+seed = 0
+
+[space.data]
+seed = 0
+num_policy = "__null__"
+cache = true
+path = ":data/classif-num-large-0-jannis"
+cat_policy = "__null__"
+y_policy = "__null__"
+
+[space.model]
+booster = "gbtree"
+n_estimators = 4000
+n_jobs = 1
+tree_method = "gpu_hist"
+use_label_encoder = false
+colsample_bytree = 0.6254294883230334
+gamma = 0
+lambda = 0.7897046380039163
+learning_rate = 0.031178853073225286
+max_depth = 12
+min_child_weight = 6.326222395584873
+subsample = 0.9548893600755936
+
+[space.fit]
+early_stopping_rounds = 200
+verbose = true

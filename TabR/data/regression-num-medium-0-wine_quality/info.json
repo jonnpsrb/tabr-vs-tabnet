@@ -1,0 +1,9 @@
+{
+    "name": "regression-num-medium-0-wine_quality",
+    "id": "regression-num-medium-0-wine_quality",
+    "task_type": "regression",
+    "train_size": 4547,
+    "val_size": 585,
+    "test_size": 1365,
+    "n_num_features": 11
+}

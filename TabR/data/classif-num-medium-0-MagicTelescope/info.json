@@ -1,0 +1,9 @@
+{
+    "name": "classif-num-medium-0-MagicTelescope",
+    "id": "classif-num-medium-0-MagicTelescope",
+    "task_type": "binclass",
+    "train_size": 9363,
+    "val_size": 1203,
+    "test_size": 2810,
+    "n_num_features": 10
+}

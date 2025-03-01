@@ -1,0 +1,144 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA L4"
+    ],
+    "config": {
+        "seed": 0,
+        "function": "bin.xgboost_.main",
+        "n_trials": 200,
+        "timeout": null,
+        "sampler": {
+            "n_startup_trials": 20
+        },
+        "space": {
+            "seed": 0,
+            "data": {
+                "seed": 0,
+                "num_policy": null,
+                "cache": true,
+                "path": ":data/regression-num-medium-0-houses",
+                "cat_policy": null,
+                "y_policy": "standard"
+            },
+            "model": {
+                "booster": "gbtree",
+                "n_estimators": 4000,
+                "n_jobs": 1,
+                "tree_method": "gpu_hist",
+                "use_label_encoder": false,
+                "colsample_bytree": [
+                    "_tune_",
+                    "uniform",
+                    0.5,
+                    1.0
+                ],
+                "gamma": [
+                    "_tune_",
+                    "?loguniform",
+                    0,
+                    0.001,
+                    100.0
+                ],
+                "lambda": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    0.1,
+                    10.0
+                ],
+                "learning_rate": [
+                    "_tune_",
+                    "loguniform",
+                    0.001,
+                    1.0
+                ],
+                "max_depth": [
+                    "_tune_",
+                    "int",
+                    3,
+                    14
+                ],
+                "min_child_weight": [
+                    "_tune_",
+                    "loguniform",
+                    0.0001,
+                    100.0
+                ],
+                "subsample": [
+                    "_tune_",
+                    "uniform",
+                    0.5,
+                    1.0
+                ]
+            },
+            "fit": {
+                "early_stopping_rounds": 200,
+                "verbose": true
+            }
+        }
+    },
+    "best": {
+        "function": "bin.xgboost_.main",
+        "gpus": [
+            "NVIDIA L4"
+        ],
+        "config": {
+            "seed": 0,
+            "data": {
+                "seed": 0,
+                "num_policy": null,
+                "cache": true,
+                "path": ":data/regression-num-medium-0-houses",
+                "cat_policy": null,
+                "y_policy": "standard"
+            },
+            "model": {
+                "booster": "gbtree",
+                "n_estimators": 4000,
+                "n_jobs": 1,
+                "tree_method": "gpu_hist",
+                "use_label_encoder": false,
+                "colsample_bytree": 0.7440648431916336,
+                "gamma": 0,
+                "lambda": 0.0,
+                "learning_rate": 0.011505850547631518,
+                "max_depth": 8,
+                "min_child_weight": 0.0027169951568013833,
+                "subsample": 0.8461148924576882
+            },
+            "fit": {
+                "early_stopping_rounds": 200,
+                "verbose": true
+            },
+            "neighbors": null
+        },
+        "prediction_type": null,
+        "time": "0:00:13.674368",
+        "best_iteration": 3999,
+        "metrics": {
+            "train": {
+                "rmse": 0.023990862211854994,
+                "mae": 0.01905300296091683,
+                "r2": 0.9982068834120361,
+                "score": -0.023990862211854994
+            },
+            "val": {
+                "rmse": 0.22988092775059116,
+                "mae": 0.15450296158730836,
+                "r2": 0.8425765654707171,
+                "score": -0.22988092775059116
+            },
+            "test": {
+                "rmse": 0.21680371708123114,
+                "mae": 0.15032002898503194,
+                "r2": 0.8543585677093852,
+                "score": -0.21680371708123114
+            }
+        },
+        "trial_id": 163,
+        "tuning_time": "0:31:51.917435"
+    },
+    "time": "0:38:28.829767",
+    "n_completed_trials": 200
+}

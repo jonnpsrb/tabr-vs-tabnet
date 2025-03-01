@@ -1,0 +1,33 @@
+seed = 0
+function = "bin.ffn.main"
+n_trials = 100
+timeout = "__null__"
+
+[sampler]
+
+[space]
+seed = 0
+num_embeddings = "__null__"
+batch_size = 256
+patience = 16
+n_epochs = inf
+
+[space.data]
+seed = 0
+cache = true
+path = ":data/classif-num-medium-0-MagicTelescope"
+num_policy = "quantile"
+cat_policy = "__null__"
+y_policy = "__null__"
+
+[space.model]
+type = "MLP"
+n_blocks = 2
+d_layer = 585
+dropout = 0.20515560892220425
+activation = "ReLU"
+
+[space.optimizer]
+type = "AdamW"
+lr = 0.00039899978283831157
+weight_decay = 5.2179685001357506e-05

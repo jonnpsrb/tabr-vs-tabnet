@@ -1,0 +1,33 @@
+seed = 0
+function = "bin.ffn.main"
+n_trials = 100
+timeout = "__null__"
+
+[sampler]
+
+[space]
+seed = 0
+num_embeddings = "__null__"
+batch_size = 256
+patience = 16
+n_epochs = inf
+
+[space.data]
+seed = 0
+cache = true
+path = ":data/classif-cat-medium-0-electricity"
+num_policy = "quantile"
+cat_policy = "ordinal"
+y_policy = "__null__"
+
+[space.model]
+type = "MLP"
+n_blocks = 3
+d_layer = 595
+dropout = 0.10501949126479043
+activation = "ReLU"
+
+[space.optimizer]
+type = "AdamW"
+lr = 0.0009141069065035656
+weight_decay = 0.0

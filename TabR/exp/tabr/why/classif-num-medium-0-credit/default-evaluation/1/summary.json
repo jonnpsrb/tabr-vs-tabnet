@@ -1,0 +1,14 @@
+{
+    "function": "bin.tabr.main",
+    "gpus": [
+        "Tesla T4"
+    ],
+    "n_parameters": 638386,
+    "best_epoch": 20,
+    "scores": {
+        "train": 0.7946,
+        "val": 0.7939424031777557,
+        "test": 0.7663829787234042
+    },
+    "time": "0:00:50.661518"
+}

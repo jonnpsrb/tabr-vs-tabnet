@@ -1,0 +1,19 @@
+{
+    "function": "bin.tune.main",
+    "best": {
+        "function": "bin.xgboost_.main",
+        "gpus": [
+            "NVIDIA L4"
+        ],
+        "tuning_time": "0:02:22.291997",
+        "trial_id": 134,
+        "scores": {
+            "train": 0.7955,
+            "val": 0.79493545183714,
+            "test": 0.7685106382978724
+        },
+        "time": "0:00:00.481215"
+    },
+    "n_completed_trials": 200,
+    "time": "0:03:15.003349"
+}

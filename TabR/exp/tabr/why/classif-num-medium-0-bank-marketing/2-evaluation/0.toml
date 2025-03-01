@@ -1,0 +1,39 @@
+seed = 0
+function = "bin.tabr.main"
+n_trials = 100
+timeout = "__null__"
+
+[sampler]
+
+[space]
+seed = 0
+batch_size = 256
+patience = 16
+n_epochs = inf
+context_size = 96
+
+[space.data]
+seed = 0
+cache = true
+path = ":data/classif-num-medium-0-bank-marketing"
+num_policy = "quantile"
+cat_policy = "__null__"
+y_policy = "__null__"
+
+[space.model]
+num_embeddings = "__null__"
+d_main = 242
+context_dropout = 0.4705851481954542
+d_multiplier = 2.0
+encoder_n_blocks = 0
+predictor_n_blocks = 1
+mixer_normalization = "auto"
+dropout0 = 0.5880996760498625
+dropout1 = 0.0
+normalization = "LayerNorm"
+activation = "ReLU"
+
+[space.optimizer]
+type = "AdamW"
+lr = 0.000110452103441303
+weight_decay = 0.0

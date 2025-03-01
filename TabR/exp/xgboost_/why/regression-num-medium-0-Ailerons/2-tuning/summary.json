@@ -1,0 +1,19 @@
+{
+    "function": "bin.tune.main",
+    "best": {
+        "function": "bin.xgboost_.main",
+        "gpus": [
+            "Tesla T4"
+        ],
+        "tuning_time": "0:15:27.565996",
+        "trial_id": 178,
+        "scores": {
+            "train": -0.00012938983515754435,
+            "val": -0.0001498040208907633,
+            "test": -0.0001558130221253095
+        },
+        "time": "0:00:04.557937"
+    },
+    "n_completed_trials": 200,
+    "time": "0:17:10.010285"
+}

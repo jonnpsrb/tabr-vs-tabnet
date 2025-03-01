@@ -1,0 +1,21 @@
+{
+    "function": "bin.tune.main",
+    "best": {
+        "function": "bin.tabr.main",
+        "gpus": [
+            "Tesla T4"
+        ],
+        "n_parameters": 975473,
+        "best_epoch": 125,
+        "tuning_time": "1:29:53.226090",
+        "trial_id": 32,
+        "scores": {
+            "train": -0.19913723835375868,
+            "val": -0.2167162693933187,
+            "test": -0.201039292776848
+        },
+        "time": "0:04:19.133245"
+    },
+    "n_completed_trials": 100,
+    "time": "5:10:35.040459"
+}

@@ -1,0 +1,9 @@
+{
+    "name": "classif-num-medium-0-bank-marketing",
+    "id": "classif-num-medium-0-bank-marketing",
+    "task_type": "binclass",
+    "train_size": 7404,
+    "val_size": 952,
+    "test_size": 2222,
+    "n_num_features": 7
+}

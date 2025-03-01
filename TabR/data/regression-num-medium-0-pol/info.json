@@ -1,0 +1,9 @@
+{
+    "name": "regression-num-medium-0-pol",
+    "id": "regression-num-medium-0-pol",
+    "task_type": "regression",
+    "train_size": 10000,
+    "val_size": 1500,
+    "test_size": 3500,
+    "n_num_features": 26
+}

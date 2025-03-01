@@ -1,0 +1,9 @@
+{
+    "name": "classif-num-large-0-jannis",
+    "id": "classif-num-large-0-jannis",
+    "task_type": "binclass",
+    "train_size": 40306,
+    "val_size": 5182,
+    "test_size": 12092,
+    "n_num_features": 54
+}

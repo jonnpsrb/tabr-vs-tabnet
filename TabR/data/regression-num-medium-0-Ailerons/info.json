@@ -1,0 +1,9 @@
+{
+    "name": "regression-num-medium-0-Ailerons",
+    "id": "regression-num-medium-0-Ailerons",
+    "task_type": "regression",
+    "train_size": 9625,
+    "val_size": 1237,
+    "test_size": 2888,
+    "n_num_features": 33
+}

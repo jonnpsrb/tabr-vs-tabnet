@@ -1,0 +1,10 @@
+{
+    "name": "classif-cat-medium-0-electricity",
+    "id": "classif-cat-medium-0-electricity",
+    "task_type": "binclass",
+    "train_size": 10000,
+    "val_size": 8542,
+    "test_size": 19932,
+    "n_num_features": 7,
+    "n_cat_features": 1
+}

@@ -1,0 +1,21 @@
+{
+    "function": "bin.tune.main",
+    "best": {
+        "function": "bin.ffn.main",
+        "gpus": [
+            "NVIDIA A100-SXM4-40GB"
+        ],
+        "n_parameters": 267532,
+        "best_epoch": 32,
+        "tuning_time": "0:00:10.141580",
+        "trial_id": 0,
+        "scores": {
+            "train": 0.8076715289032955,
+            "val": 0.8224789915966386,
+            "test": 0.788028802880288
+        },
+        "time": "0:00:05.373913"
+    },
+    "n_completed_trials": 13,
+    "time": "0:01:10.550787"
+}
